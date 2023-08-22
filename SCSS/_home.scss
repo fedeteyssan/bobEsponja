@@ -1,0 +1,403 @@
+#my-home {
+  margin: 0;
+  padding: 0;
+  font-family: 'Londrina Solid', cursive;
+  overflow: hidden;
+
+  #first-section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("/Multimedia/bgSea2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+ 
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: top 1s;
+
+    h1{
+      text-transform: uppercase;
+      color: black;
+      font-size: 4rem;
+    }
+  }
+      
+  #second-section {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: top 1s;
+
+    background-color: #fef92e;
+
+    #bobFace{
+      position: relative;
+        top: -6.5rem;
+
+        width: 500px;
+        cursor:grab; 
+
+        transition: top 1s;
+
+        animation: pulse 2s infinite;
+        @keyframes pulse {
+        0% {
+            transform: scale(0.95);
+        }
+    
+        70% {
+            transform: scale(1);
+        }
+    
+        100% {
+            transform: scale(0.95);
+        }
+      }   
+    }
+
+    div{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h2{
+        font-size: 3rem;
+        margin: 1rem;
+      }
+
+      #logo{
+        width: 350px;
+        margin: 0 1rem;
+      }
+    }
+
+    p{
+      font-size: 1.75rem;
+      text-align: center;
+    }
+
+   
+
+    .wave{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background: url("/Multimedia/wave.png");
+      background-size: 1000px 100px;
+        
+    }
+
+    #wave1{
+      opacity: 1;
+      bottom: 0;
+      z-index: 10;
+      animation: animate 4s linear infinite;
+    }
+
+    #wave2{
+      opacity: 0.5;
+      bottom: 10px;
+      z-index: 9;
+      animation: animate2 2s linear infinite;
+    }
+
+    #wave3{
+      opacity: 0.2;
+      bottom: 15px;
+      z-index: 8;
+      animation: animate 4s linear infinite;
+    }
+
+    #wave4{
+      opacity: 0.7;
+      bottom: 20px;
+      z-index: 9;
+      animation: animate2 2s linear infinite;
+    }
+
+    @keyframes animate {
+      0%{
+        background-position-x:1000px ;
+      }
+
+      100%{
+        background-position-x:0 ;
+      }   
+        
+    }
+
+    @keyframes animate2 {
+      0%{
+        background-position-x:0 ;
+        }
+
+      100%{
+        background-position-x:1000px ;
+      }   
+    }
+  }  
+
+  #third-section {
+    background-image: url("/Multimedia/bgSea.png");
+
+    position: absolute;
+    top:100vh;
+    width: 100%;
+    height: 125vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ftw-lifestyle-container{
+      width: 100%;
+      height: 100%;
+
+      position: relative;
+      top: 45%;
+
+      background-image: url("/Multimedia/bgSneakers.png");
+      background-attachment: fixed;
+      background-size: 80%;
+      background-position: center;
+      background-repeat: no-repeat;    
+    } 
+  }  
+
+  #fourth-section{
+    background:url("/Multimedia/bgSea.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    position: absolute;
+    top:225vh;
+    width: 100%;
+    height: 175vh;       
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .app-lifestyle-container{
+      width: 100%;
+      height: 50%;
+
+      position: relative;
+      top: 25%;
+
+      background-image: url("/Multimedia/bgOutfit.png");
+      background-attachment: fixed;
+      background-size: 80%;
+      background-position: center;
+      background-repeat: no-repeat;    
+    } 
+  }  
+
+  .wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @keyframes float {
+      0% {
+        transform: translatey(0px);
+      }
+      50% {
+        transform: translatey(-20px);
+      }
+      100% {
+        transform: translatey(0px);
+      }
+    }
+
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+
+    h3{
+      color: black;
+      font-size: 2rem;
+      background-color: #fef92e;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+    }
+  
+    .white-images-container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  
+        img{
+          width: 100%; 
+        }
+  
+        a{
+          text-align: center;
+          text-decoration: none;
+  
+          margin-top: 1rem;
+          padding: 0.5rem 0;
+  
+          width: 100px;
+  
+          color: black;
+          background-color: #f5f12ecd;
+  
+          border-radius: 5px;
+          border-style:groove;
+          border-color: #f5f12ecd;
+
+          &:hover{
+            background-color: #fef92e;
+            animation: pulse 1s infinite;
+            @keyframes pulse {
+            0% {
+                transform: scale(1.1);
+              }
+        
+            70% {
+                transform: scale(1);
+              }
+        
+            100% {
+                transform: scale(1.1);
+              }
+            }   
+          }
+              
+        }
+      }
+    } 
+  }
+
+  #fifth-section{
+    background:url("/Multimedia/bgSea2.png");
+    background-attachment: fixed;
+
+    position: absolute;
+    top:400vh;
+    width: 100%;
+    height: 100vh;       
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }  
+    
+  #sixth-section{
+    background-image: url("/Multimedia/bgPineapple.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    position: absolute;
+    top:500vh;
+    width: 100%;
+    height: 100vh;       
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    div{
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h3{
+        color: white ;
+        font-size: 4rem;
+        text-align: center;
+      }
+  
+      a{
+        text-align: center;
+        text-decoration: none;
+  
+        margin-top: 5rem;
+        padding: 0.5rem 0;
+  
+        width: 100px;
+  
+        color: black;
+        background-color: #f5f12ecd;
+  
+        border-radius: 5px;
+        border-style:groove;
+        border-color: #f5f12ecd;
+  
+        &:hover{
+          background-color: #fef92e;
+          animation: pulse 1s infinite;
+          @keyframes pulse {
+          0% {
+              transform: scale(1.1);
+            }
+      
+          70% {
+              transform: scale(1);
+            }
+      
+          100% {
+              transform: scale(1.1);
+            }
+          }   
+        }
+            
+      }
+    }
+
+   
+
+    /*
+    .bg-move{
+      background-image: url("/Multimedia/bg-sneakers.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      top: 100px;
+      bottom: 0;
+      right: auto;
+    }*/
+  }
+}
+
+
+  
+
+  
+
+  
